@@ -1,13 +1,16 @@
 import LinkedInStrategy from 'passport-linkedin';
+//import linked from './config2';
 
 passport.use(new LinkedInStrategy({
-  consumerKey: "778z9t10nsrwax",
-  consumerSecret: "iTOgePcJpxbnB9OX",
-  callbackURL: "http://127.0.0.1:3000/auth/linkedin/callback"
+    {linked}
 },
+
 function(token, tokenSecret, profile, done) {
   User.findOrCreate({ linkedinId: profile.id }, function (err, user) {
     return done(err, user);
   });
 }
 ));
+
+export default LinkedInStrategy;
+
