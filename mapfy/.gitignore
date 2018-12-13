@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Api token
-.config.js
-.config2.js
+.src/config.js
+.src/config2.js
